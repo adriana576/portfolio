@@ -1,0 +1,242 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0b0f19;
+  color: #e5e7eb;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #16213d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo { font-size: 1.5rem; font-weight: bold; color: white; }
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: #ed3acc; }
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.hero-text {
+  flex: 1;
+  max-width: 45%;
+}
+.hero-text h1 span { color: #f445bf; }
+.btn {
+  background: #ed3ac0;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.btn-outline {
+  border: 1px solid #ed3a96;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Carousel */
+.carousel-container {
+  position: relative;
+  width: 400px;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.card {
+  min-width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #7c3aed;
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* Sections */
+section {
+  padding: 80px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  opacity: 0; /* hidden initially */
+  transform: translateY(50px); /* slightly down */
+  transition: opacity 1s ease, transform 1s ease; /* smooth fade + slide */
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  border-bottom: 2px solid #7c3aed;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Paragraph text */
+section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e5e7eb;
+  margin-bottom: 40px;
+}
+
+/* Projects Cards */
+.project-cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+.project-cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-cards::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 4px;
+}
+
+.project {
+  min-width: 300px;
+  flex: 0 0 auto;
+  background-color: #1a1f2e;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  margin: 15px;
+  color: #fff;
+}
+
+.project p {
+  font-size: 0.95rem;
+  margin: 0 15px 15px;
+  color: #ccc;
+}
+
+/* Optional: Hide scrollbar for all browsers except on hover */
+.project-cards {
+  scrollbar-width: thin;
+  scrollbar-color: #7c3aed transparent;
+  gap: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .project-cards {
+    gap: 20px;
+    padding-bottom: 15px;
+  }
+
+  .project {
+    min-width: 70px;
+  }
+}
+
+.project img {
+  width: 40%;
+  height: auto;
+  display: block;
+  justify-content: center;
+}
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(124, 58, 237, 0.6);
+}
+
+/* Skills grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.skill {
+  flex: 1 1 calc(33% - 20px);
+  background-color: #1a1f2e;
+  padding: 20px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(124, 58, 237, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.6);
+}
+
+/* Contact Section */
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+#contact a {
+  color: #7c3aed;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+#contact a:hover {
+  color: #06b6d4;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 100px) {
+  .project {
+    flex: 1 1 100%;
+  }
+  .skill {
+    flex: 1 1 100%;
+  }
+}

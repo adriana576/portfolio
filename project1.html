@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UniTrack : Lost and Found System</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Override / Add project-detail styles */
+.project-detail {
+  max-width: 1200px;
+  margin: 50px auto;
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* Horizontal scroll container */
+.project-images {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.project-images img {
+  min-width: 200px;
+  border-radius: 15px;
+  height: auto;
+  flex-shrink: 0;
+  width: 20%;          /* reduce width */
+  max-width: 400px;    /* optional max width */
+  height: auto;        /* maintain aspect ratio */
+  border-radius: 14px;
+  margin: 20px 0;
+  gap:20px;
+}
+
+/* Project text */
+.project-detail p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Back button */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #7c3aed;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #ed5fd8;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo">Alesya</div>
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main class="project-detail">
+  <h1>UniTrack : Lost and Found System</h1>
+  
+  <!-- Horizontal scroll container -->
+  <div class="project-images">
+    <img src="assets/images/project1.png" alt="UniTrack screenshot 1">
+    <img src="assets/images/project1(1).png" alt="UniTrack screenshot 2">
+    <img src="assets/images/project1(2).png" alt="UniTrack screenshot 3">
+    <img src="assets/images/project1(3).png" alt="UniTrack screenshot 4">
+    <img src="assets/images/project1(4).png" alt="UniTrack screenshot 5">
+  </div>
+
+  <p>This is my ICT602 project, UniTrack, a lost-and-found system that allows students to report missing items or claim found ones.</p>
+  
+  <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+</main>
+
+</body>
+</html>

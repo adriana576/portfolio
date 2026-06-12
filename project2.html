@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Committee Management</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Project Detail Styles */
+.project-detail {
+  max-width: 1200px;
+  margin: 50px auto;
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* Horizontal scroll container for images */
+.project-images {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.project-images img {
+  min-width: 900px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  height: auto;
+  width: 90%;          /* reduce width */
+  max-width: 400px;    /* optional max width */
+  height: auto;        /* maintain aspect ratio */
+  border-radius: 14px;
+  margin: 20px 0;
+  gap:20px;
+}
+
+/* Project description */
+.project-detail p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Back button */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #7c3aed;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #ed5fd8;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo">Alesya</div>
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main class="project-detail">
+  <h1>Committee Management System</h1>
+  
+  <!-- Horizontal scroll for images -->
+  <div class="project-images">
+    <img src="assets/images/fyp1.png" alt="Smart Committee Screenshot 1">
+    <img src="assets/images/fyp2.png" alt="Smart Committee Screenshot 2">
+  </div>
+
+  <p>This is my FYP project, which is still ongoing. It is a system to manage staff committee tasks, members, and appointment finalization.</p>
+
+  <!-- Back button -->
+  <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+</main>
+
+</body>
+</html>
