@@ -230,21 +230,25 @@ section.visible {
 ========================= */
 @media screen and (max-width: 768px) {
 
+  /* HEADER FIX */
   .header-container {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
     padding: 15px 20px;
+    gap: 10px;
   }
 
   .nav-links {
+    display: flex;
     flex-wrap: wrap;
     gap: 10px;
   }
 
+  /* HERO FIX */
   .hero {
     flex-direction: column;
     padding: 20px;
+    gap: 20px;
   }
 
   .hero-text {
@@ -255,15 +259,32 @@ section.visible {
     width: 100%;
   }
 
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* PROJECT SECTION FIX */
+  .project img {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .project-cards {
+    overflow-x: auto;
+    gap: 15px;
+  }
+
   .project {
-    min-width: 80%;
+    min-width: 85%;
   }
 
-  .skills-grid {
-    flex-direction: column;
+  /* TEXT FIX */
+  h1 {
+    font-size: 1.8rem;
   }
 
-  section {
-    padding: 50px 20px;
+  p {
+    font-size: 0.95rem;
   }
 }
