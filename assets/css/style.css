@@ -180,7 +180,7 @@ section.visible {
 }
 
 .project img {
-  width: 100%;
+  width: 45%;
   height: auto;
   display: block;
 }
@@ -260,13 +260,13 @@ section.visible {
   }
 
   .card img {
-    width: 100%;
+    width: 70%;
     height: auto;
   }
 
   /* PROJECT SECTION FIX */
   .project img {
-    width: 100% !important;
+    width: 30% !important;
     height: auto;
   }
 
