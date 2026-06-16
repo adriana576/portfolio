@@ -1,15 +1,20 @@
-/* General */
+/* =========================
+   GENERAL
+========================= */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: #0b0f19;
   color: #e5e7eb;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -20,27 +25,48 @@ html {
   top: 0;
   z-index: 100;
 }
-.logo { font-size: 1.5rem; font-weight: bold; color: white; }
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
 .nav-links a {
-  margin-left: 25px;
   text-decoration: none;
   color: white;
   font-weight: 500;
   transition: color 0.3s;
 }
-.nav-links a:hover { color: #ed3acc; }
 
-/* Hero */
+.nav-links a:hover {
+  color: #ed3acc;
+}
+
+/* =========================
+   HERO
+========================= */
 .hero {
   display: flex;
   justify-content: space-between;
   padding: 50px;
 }
+
 .hero-text {
   flex: 1;
   max-width: 45%;
 }
-.hero-text h1 span { color: #f445bf; }
+
+.hero-text h1 span {
+  color: #f445bf;
+}
+
+/* Buttons */
 .btn {
   background: #ed3ac0;
   color: white;
@@ -49,6 +75,7 @@ html {
   border-radius: 5px;
   text-decoration: none;
 }
+
 .btn-outline {
   border: 1px solid #ed3a96;
   padding: 10px 20px;
@@ -57,25 +84,31 @@ html {
   text-decoration: none;
 }
 
-/* Carousel */
+/* =========================
+   CAROUSEL
+========================= */
 .carousel-container {
   position: relative;
   width: 400px;
   overflow: hidden;
 }
+
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
+
 .card {
   min-width: 100%;
   border-radius: 12px;
   overflow: hidden;
 }
+
 .card img {
   width: 100%;
   height: auto;
 }
+
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -89,154 +122,148 @@ html {
   cursor: pointer;
   z-index: 10;
 }
+
 .carousel-btn.prev { left: 10px; }
 .carousel-btn.next { right: 10px; }
 
-/* Sections */
+/* =========================
+   SECTIONS ANIMATION
+========================= */
 section {
   padding: 80px 50px;
   max-width: 1200px;
   margin: 0 auto;
 
-  opacity: 0; /* hidden initially */
-  transform: translateY(50px); /* slightly down */
-  transition: opacity 1s ease, transform 1s ease; /* smooth fade + slide */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
 }
+
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Section Titles */
-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fff;
-  border-bottom: 2px solid #7c3aed;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-/* Paragraph text */
-section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #e5e7eb;
-  margin-bottom: 40px;
-}
-
-/* Projects Cards */
+/* =========================
+   PROJECTS (HORIZONTAL SCROLL)
+========================= */
 .project-cards {
   display: flex;
   overflow-x: auto;
   gap: 20px;
-  padding-bottom: 20px;
   scroll-behavior: smooth;
+  padding-bottom: 10px;
 }
 
 .project-cards::-webkit-scrollbar {
-  height: 8px;
+  height: 6px;
 }
 
 .project-cards::-webkit-scrollbar-thumb {
   background: #7c3aed;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 .project {
-  min-width: 300px;
+  min-width: 280px;
   flex: 0 0 auto;
   background-color: #1a1f2e;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.project h3 {
-  font-size: 1.2rem;
-  margin: 15px;
-  color: #fff;
-}
-
-.project p {
-  font-size: 0.95rem;
-  margin: 0 15px 15px;
-  color: #ccc;
-}
-
-/* Optional: Hide scrollbar for all browsers except on hover */
-.project-cards {
-  scrollbar-width: thin;
-  scrollbar-color: #7c3aed transparent;
-  gap: 20px;
-}
-
-@media screen and (max-width: 900px) {
-  .project-cards {
-    gap: 20px;
-    padding-bottom: 15px;
-  }
-
-  .project {
-    min-width: 70px;
-  }
+.project:hover {
+  transform: translateY(-8px);
 }
 
 .project img {
-  width: 40%;
+  width: 100%;
   height: auto;
   display: block;
-  justify-content: center;
-}
-.project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(124, 58, 237, 0.6);
 }
 
-/* Skills grid */
+.project h3 {
+  margin: 10px;
+  color: white;
+}
+
+.project p {
+  margin: 0 10px 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* =========================
+   SKILLS
+========================= */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .skill {
   flex: 1 1 calc(33% - 20px);
   background-color: #1a1f2e;
   padding: 20px;
   text-align: center;
-  font-weight: 500;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(124, 58, 237, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.skill:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.6);
 }
 
-/* Contact Section */
-#contact p {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
+/* =========================
+   CONTACT
+========================= */
 #contact a {
   color: #7c3aed;
   text-decoration: none;
-  transition: color 0.3s ease;
-}
-#contact a:hover {
-  color: #06b6d4;
-  text-decoration: underline;
 }
 
-/* Responsive */
-@media screen and (max-width: 100px) {
-  .project {
-    flex: 1 1 100%;
+#contact a:hover {
+  color: #06b6d4;
+}
+
+/* =========================
+   MOBILE FIX (IMPORTANT)
+========================= */
+@media screen and (max-width: 768px) {
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
   }
-  .skill {
-    flex: 1 1 100%;
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .carousel-container {
+    width: 100%;
+  }
+
+  .project {
+    min-width: 80%;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 50px 20px;
   }
 }
