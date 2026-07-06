@@ -153,6 +153,12 @@ section.visible {
   gap: 20px;
   scroll-behavior: smooth;
   padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-cards .project {
+  scroll-snap-align: start; /* snap each project card */
 }
 
 .project-cards::-webkit-scrollbar {
@@ -165,7 +171,8 @@ section.visible {
 }
 
 .project {
-  min-width: 280px;
+  min-width: 300px;
+  max-width: 1600px;
   flex: 0 0 auto;
   background-color: #1a1f2e;
   border-radius: 15px;
